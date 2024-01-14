@@ -36,6 +36,7 @@
 
     # apps
     firefox
+    jetbrains-toolbox
   ];
 
   home.stateVersion = "23.11";
