@@ -6,7 +6,10 @@ in {
 
     ../../system
 
+    ./cpufreq.nix
+    ./environment.nix
     ./firewall.nix
+    ./laptop-lid.nix
   ];
 
   networking.hostName = hostname;

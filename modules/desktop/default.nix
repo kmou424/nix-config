@@ -4,7 +4,7 @@
 
     ./fonts.nix
     ./flatpak-fix.nix
-    ./gnome.nix
+    ./cinnamon.nix
     ./input-method.nix
   ];
 }
