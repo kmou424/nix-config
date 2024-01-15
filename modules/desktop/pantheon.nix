@@ -25,7 +25,7 @@
   programs.pantheon-tweaks.enable = true;
 
   # keep some pkgs I need
-  environment.systemPackages = with pkgs.pantheon; [
+  environment.systemPackages = (with pkgs.pantheon; [
     elementary-terminal
     elementary-calculator
     elementary-calendar
@@ -33,5 +33,7 @@
     elementary-screenshot
     elementary-tasks
     sideload
-  ];
+  ]) ++ (with pkgs; [
+    gnome.gnome-system-monitor
+  ]);
 }
