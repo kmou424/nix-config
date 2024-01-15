@@ -3,7 +3,7 @@
     # misc for wayland
     GDK_BACKEND = "wayland,x11";
     SDL_VIDEODRIVER = "wayland";
-    CLUTTER_BACKEND = "wayland";
+    # CLUTTER_BACKEND = "wayland";
  
    # qt for wayland
     QT_AUTO_SCREEN_SCALE_FACTOR = "1";

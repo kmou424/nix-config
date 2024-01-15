@@ -11,8 +11,6 @@
     neofetch
 
     wofi
-    cinnamon.nemo
-    cinnamon.nemo-with-extensions
 
     # hyprland
     waybar

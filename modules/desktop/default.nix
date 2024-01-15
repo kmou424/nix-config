@@ -4,7 +4,7 @@
 
     ./fonts.nix
     ./flatpak-fix.nix
-    ./cinnamon.nix
+    ./pantheon.nix
     ./input-method.nix
   ];
 }
