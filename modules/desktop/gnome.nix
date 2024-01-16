@@ -44,7 +44,7 @@
   programs.kdeconnect.enable = true;
 
   # set qt theme
-  # qt.platformTheme = "gnome";
+  qt.platformTheme = "gnome";
 
   environment.gnome.excludePackages = (with pkgs; [
     gnome-photos
