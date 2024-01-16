@@ -1,4 +1,5 @@
-{ username, ... }: let hostname = "Legion5Pro";
+{ username, ... }:
+  let hostname = "plymonth";
 in {
   imports = [
     ../../modules/desktop

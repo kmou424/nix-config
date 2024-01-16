@@ -15,17 +15,17 @@
       useremail = consts.useremail;
     in {
       nixosConfigurations = {
-        "Legion5Pro" = nixpkgs.lib.nixosSystem {
+        "plymonth" = nixpkgs.lib.nixosSystem {
           system = "x86_64-linux";
 
           specialArgs = { inherit inputs username useremail; };
           modules = [
-            ./hosts/Legion5Pro
+            ./hosts/plymonth
             home-manager.nixosModules.home-manager
             {
               home-manager.useGlobalPkgs = true;
               home-manager.useUserPackages = true;
-              home-manager.users."${username}" = import ./home/Legion5Pro/home.nix;
+              home-manager.users."${username}" = import ./home/plymonth/home.nix;
 
               home-manager.extraSpecialArgs = { inherit inputs username useremail; };
             }
