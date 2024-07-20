@@ -28,7 +28,7 @@
     # gnome screenshot tool
     gnome.gnome-screenshot
     # editor
-    gnome.gedit
+    pkgs.gedit
   ]);
 
   # no online accounts feature
