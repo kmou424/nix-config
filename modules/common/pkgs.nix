@@ -10,6 +10,10 @@
     aria2
     neofetch
 
+    # theme
+    sassc
+    glib
+
     # programming
     ruby
     go

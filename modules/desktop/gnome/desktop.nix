@@ -9,15 +9,14 @@
      experimental-features=['scale-monitor-framebuffer']
    '';
    sessionPath = with pkgs; [
-     gnome.gpaste
    ];
   };
 
   environment.systemPackages = (with pkgs; [
     gnome.gnome-tweaks
     # file manager
-    cinnamon.nemo
-    cinnamon.nemo-with-extensions
+    # cinnamon.nemo
+    # cinnamon.nemo-with-extensions
     # text editor
     libsForQt5.kate
     # terminal
@@ -26,6 +25,10 @@
     gnome.dconf-editor
     # gnome virtual box
     gnome.gnome-boxes
+    # gnome screenshot tool
+    gnome.gnome-screenshot
+    # editor
+    gnome.gedit
   ]);
 
   # no online accounts feature
@@ -46,6 +49,9 @@
   # set qt theme
   qt.platformTheme = "gnome";
 
+  # for gnome extension
+  services.gnome.gnome-browser-connector.enable = true;
+
   environment.gnome.excludePackages = (with pkgs; [
     gnome-photos
     gnome-tour
@@ -59,8 +65,6 @@
     gnome-music
     gnome-software
     gnome-maps
-    nautilus # file manager
-    gedit # text editor
     epiphany # web browser
     geary # email reader
     evince # document viewer
