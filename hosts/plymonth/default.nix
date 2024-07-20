@@ -2,7 +2,7 @@
   let hostname = "plymonth";
 in {
   imports = [
-    ../../modules/desktop
+    ../../modules
     ../../pkgs/drivers/nvidia.nix
 
     ../../system

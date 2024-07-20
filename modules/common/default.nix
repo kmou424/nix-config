@@ -11,6 +11,7 @@
     ./sound.nix
     ./sudo.nix
     ./user.nix
+    ./zsh.nix
   ];
 
   nix.settings = {

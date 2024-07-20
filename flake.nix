@@ -13,27 +13,12 @@
       consts = import ./consts.nix;
       username = consts.username;
       useremail = consts.useremail;
-
-      extraArgs = { inherit inputs username useremail; };
+      system = "x86_64-linux";
     in {
-      nixosConfigurations = {
-        "plymonth" = nixpkgs.lib.nixosSystem {
-          system = "x86_64-linux";
-
-          specialArgs = extraArgs;
-          modules = [
-            ./hosts/plymonth
-
-            home-manager.nixosModules.home-manager
-            {
-              home-manager.useGlobalPkgs = true;
-              home-manager.useUserPackages = true;
-              home-manager.users."${username}" = import ./hosts/plymonth/home;
-
-              home-manager.extraSpecialArgs = extraArgs;
-            }
-          ];
-        };
-      };
+      nixosConfigurations = (
+        import ./hosts {
+          inherit inputs system username useremail;
+        }
+      );
     };
 }

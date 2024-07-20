@@ -5,6 +5,7 @@
     git-lfs
     nano
     # vim
+    neovim
     wget
     curl
     aria2
