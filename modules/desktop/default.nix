@@ -1,7 +1,5 @@
 {
   imports = [
-    ../common
-
     ./fonts.nix
     ./flatpak-fix.nix
     ./gnome
