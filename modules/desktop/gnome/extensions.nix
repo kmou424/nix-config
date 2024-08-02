@@ -13,5 +13,6 @@
     pinguxnetlabel # netspeed indicator
     space-bar # workspace indicator
     spotify-tray
+    kimpanel
   ];
 }

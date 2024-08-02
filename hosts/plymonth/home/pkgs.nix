@@ -27,7 +27,8 @@
     binutils
 
     # apps
-    firefox
+    microsoft-edge
+    clash-verge-rev
     jetbrains-toolbox
   ];
 }
