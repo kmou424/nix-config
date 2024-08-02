@@ -28,6 +28,9 @@
       # Sarasa-Gothic
       sarasa-gothic
 
+      # MesloLGS nerd
+      meslo-lgs-nf
+
       # nerdfonts
       # https://github.com/NixOS/nixpkgs/blob/nixos-23.11/pkgs/data/fonts/nerdfonts/shas.nix
       (nerdfonts.override {
