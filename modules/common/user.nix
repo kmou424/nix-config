@@ -5,7 +5,7 @@
   users.users."${username}" = {
     uid = 1000;
     isNormalUser = true;
-    shell = pkgs.zsh;
+    shell = pkgs.fish;
     group = username;
     extraGroups = [ "wheel" "sudo" ];
   };
