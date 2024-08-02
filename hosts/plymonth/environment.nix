@@ -14,4 +14,8 @@
     LIBVA_DRIVER_NAME = "nvidia";
     __GL_VRR_ALLOWED = "0";
   };
+
+  environment.sessionVariables = rec {
+    NIXOS_OZONE_WL = "1";
+  };
 }
