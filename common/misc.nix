@@ -1,5 +1,4 @@
 { lib, pkgs, ... }: {
-
   # Enable unfree packages
   nixpkgs.config.allowUnfree = lib.mkForce true;
 
@@ -25,17 +24,6 @@
     memoryPercent = 50;
   };
 
-  # Power management
-  services = {
-    power-profiles-daemon = {
-      enable = false;
-    };
-    upower.enable = true;
-  };
-
   # replace default editor with nano
-  environment.variables.EDITOR = "nano";
-
-  # Enable flatpak
-  services.flatpak.enable = true;
+  environment.variables.EDITOR = "nvim";
 }

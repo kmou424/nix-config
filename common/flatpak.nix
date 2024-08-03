@@ -1,4 +1,7 @@
 { config, pkgs, ... }: {
+  # Enable flatpak
+  services.flatpak.enable = true;
+
   # from https://github.com/NixOS/nixpkgs/issues/119433#issuecomment-1767513263
   # for fix wrong icons and fonts in flatpak
   system.fsPackages = [ pkgs.bindfs ];

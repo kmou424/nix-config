@@ -12,7 +12,8 @@ in {
 
     ../../system
 
-    ./cpufreq.nix
+    ./edid-fix.nix
+    ./kernel.nix
     ./environment.nix
     ./firewall.nix
     ./laptop-lid.nix

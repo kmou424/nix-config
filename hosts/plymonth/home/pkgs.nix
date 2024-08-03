@@ -31,5 +31,6 @@
     clash-verge-rev
     jetbrains-toolbox
     vscode
+    nixpkgs-fmt
   ];
 }

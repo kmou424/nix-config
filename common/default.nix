@@ -12,6 +12,8 @@
     ./sudo.nix
     ./user.nix
     ./shell.nix
+    ./power.nix
+    ./flatpak.nix
   ];
 
   nix.settings = {
