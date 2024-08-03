@@ -2,15 +2,15 @@
   description = "kmou424's NixOS Flake";
 
   inputs = {
-    nixpkgs.url = "github:NixOS/nixpkgs/nixos-24.05";
-    unstable.url = "github:NixOS/nixpkgs/nixos-unstable"; 
+    nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
+    stable.url = "github:NixOS/nixpkgs/nixos-24.05";
     home-manager = {
       url = "github:nix-community/home-manager/release-24.05";
-      inputs.nixpkgs.follows = "nixpkgs";
+      inputs.nixpkgs.follows = "stable";
     };
   };
 
-  outputs = inputs@{ nixpkgs, unstable, home-manager, ... }: let
+  outputs = inputs@{ nixpkgs, home-manager, ... }: let
       consts = import ./consts.nix;
       username = consts.username;
       useremail = consts.useremail;

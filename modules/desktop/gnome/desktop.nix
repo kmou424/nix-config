@@ -13,7 +13,7 @@
   };
 
   environment.systemPackages = (with pkgs; [
-    gnome.gnome-tweaks
+    gnome-tweaks
     # file manager
     # cinnamon.nemo
     # cinnamon.nemo-with-extensions
@@ -22,13 +22,13 @@
     # terminal
     libsForQt5.konsole
     # an easy way to edit dconf
-    gnome.dconf-editor
+    dconf-editor
     # gnome virtual box
     gnome.gnome-boxes
     # gnome screenshot tool
-    gnome.gnome-screenshot
+    gnome-screenshot
     # editor
-    pkgs.gedit
+    gedit
   ]);
 
   # no online accounts feature
@@ -59,17 +59,17 @@
     gnome-console
     gnome-tecla # keyboard viewer
     snapshot # camera
-  ]) ++ (with pkgs.gnome; [
     cheese # webcam tool
+    epiphany # web browser
+    geary # email reader
+    evince # document viewer
+    totem # video player
+    simple-scan
+  ]) ++ (with pkgs.gnome; [
+    gnome-characters
     gnome-contacts
     gnome-music
     gnome-software
     gnome-maps
-    epiphany # web browser
-    geary # email reader
-    evince # document viewer
-    gnome-characters
-    totem # video player
-    simple-scan
   ]);
 }

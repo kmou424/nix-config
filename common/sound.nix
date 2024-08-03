@@ -1,11 +1,23 @@
 { pkgs, ... }: {
   environment.systemPackages = with pkgs; [
-    pulseaudio # provides `pactl`, which is required by some apps(e.g. sonic-pi)
+    pipewire
   ];
+
+  services.pipewire = {
+    enable = true;
+    audio = {
+      enable = true;
+    };
+    pulse = {
+      enable = true;
+    };
+    alsa = {
+      support32Bit = true;
+      enable = true;
+    };
+  };
+  hardware.pulseaudio.enable = false;
 
   # rtkit is optional but recommended
   security.rtkit.enable = true;
-  # Enable sound.
-  sound.enable = true;
-  hardware.pulseaudio.enable = true;
 }
