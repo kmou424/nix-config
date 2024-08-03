@@ -1,4 +1,4 @@
-{ pkgs, ... }: {
+{ pkgs, inputs, ... }: {
   home.packages = with pkgs; [
     zip
     unzip
@@ -30,5 +30,6 @@
     microsoft-edge
     clash-verge-rev
     jetbrains-toolbox
+    vscode
   ];
 }

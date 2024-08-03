@@ -9,7 +9,7 @@
     wget
     curl
     aria2
-    neofetch
+    fastfetch
 
     # theme
     sassc
