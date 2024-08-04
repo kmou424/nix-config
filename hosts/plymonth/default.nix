@@ -11,13 +11,13 @@ in {
     ../../modules/desktop
 
     # install needed drivers
-    ../../modules/drivers/amd-gpu.nix
+    # ../../modules/drivers/amd-gpu.nix
     ../../modules/drivers/nvidia.nix
 
     ../../system
 
-    ./edid-fix.nix
-    ./kernel.nix
+    # ./edid-fix.nix
+    # ./kernel.nix
     ./environment.nix
     ./firewall.nix
     ./laptop-lid.nix
