@@ -7,7 +7,7 @@
   programs.home-manager.enable = true;
 
   imports = [
-    ./pkgs.nix
+    ./apps
     ./override-configs.nix
     ./git.nix
   ];

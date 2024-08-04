@@ -3,6 +3,7 @@
 let
   nixosSystem = inputs.nixpkgs.lib.nixosSystem;
   home-manager = inputs.home-manager;
+  grub2-themes = inputs.grub2-themes;
 in
 {
   plymonth = nixosSystem (
@@ -16,6 +17,7 @@ in
       modules = [
         ./${hostname}
 
+        grub2-themes.nixosModules.default
         home-manager.nixosModules.home-manager
         {
           home-manager.useGlobalPkgs = true;

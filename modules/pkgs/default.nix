@@ -1,11 +1,17 @@
-{ pkgs, inputs, ... }: {
-  home.packages = with pkgs; [
+{ pkgs, ... }: {
+  environment.systemPackages = with pkgs; [
+    # tools
+    fastfetch # system info
+    aria2 # download tool
+
     zip
     unzip
     p7zip
 
-    # misc
+    # toys
     cowsay
+    
+    # misc
     file
     which
     tree
@@ -17,7 +23,6 @@
     gnupg
 
     lsof
-    tree
 
     # system tools
     lm_sensors # for `sensors` command
@@ -26,11 +31,8 @@
     usbutils # lsusb
     binutils
 
-    # apps
-    microsoft-edge
-    clash-verge-rev
-    jetbrains-toolbox
-    vscode
-    nixpkgs-fmt
+    # programming language
+    ruby
+    go
   ];
 }

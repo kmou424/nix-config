@@ -1,7 +1,9 @@
 {
   imports = [
-    ./fonts.nix
     ./gnome
+
+    ./fonts.nix
     ./input-method.nix
+    ./themes.nix
   ];
 }

@@ -1,22 +1,16 @@
 { pkgs, ... }: {
-  # Some default system packages
+  # necessary packages
   environment.systemPackages = with pkgs; [
     git
     git-lfs
+
+    # editors
     nano
     # vim
     neovim
+
+    # fetch
     wget
     curl
-    aria2
-    fastfetch
-
-    # theme
-    sassc
-    glib
-
-    # programming
-    ruby
-    go
   ];
 }

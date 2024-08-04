@@ -5,8 +5,12 @@ in {
     # import common configs
     ../../common
 
+    # install basic packages
+    ../../modules/pkgs
+    # enable desktop environment
     ../../modules/desktop
 
+    # install needed drivers
     ../../modules/drivers/amd-gpu.nix
     ../../modules/drivers/nvidia.nix
 
