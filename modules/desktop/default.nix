@@ -1,6 +1,6 @@
 {
   imports = [
-    ./gnome
+    ./kde.nix
 
     ./fonts.nix
     ./input-method.nix

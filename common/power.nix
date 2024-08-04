@@ -2,12 +2,12 @@
   # Power management
   services = {
     power-profiles-daemon = {
-      enable = false;
+      enable = true;
     };
     upower.enable = true;
   };
   
-  services.auto-cpufreq.enable = true;
+  services.auto-cpufreq.enable = false;
   services.auto-cpufreq.settings = {
     battery = {
       governor = "powersave";
