@@ -1,8 +1,16 @@
-{ username, lib, pkgs, ... }: {
-  nix.settings.experimental-features = [ "nix-command" "flakes" ];
+{
+  username,
+  lib,
+  pkgs,
+  ...
+}:
+{
+  nix.settings.experimental-features = [
+    "nix-command"
+    "flakes"
+  ];
 
   imports = [
-    ./bluetooth.nix
     ./i18n.nix
     ./misc.nix
     ./networking.nix
@@ -12,8 +20,9 @@
     ./sudo.nix
     ./user.nix
     ./shell.nix
-    ./power.nix
     ./flatpak.nix
+    # Laptop-specific configs (bluetooth, power) are in ./laptop/
+    # Import them in device configs that need them
   ];
 
   nix.settings = {

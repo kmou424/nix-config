@@ -1,4 +1,5 @@
-{ lib, pkgs, ... }: {
+{ lib, pkgs, ... }:
+{
   # Power management
   services = {
     power-profiles-daemon = {
@@ -6,7 +7,7 @@
     };
     upower.enable = true;
   };
-  
+
   services.auto-cpufreq.enable = false;
   services.auto-cpufreq.settings = {
     battery = {

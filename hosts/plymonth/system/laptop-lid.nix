@@ -10,3 +10,4 @@
   # services.logind.rebootKey = "reboot";
   # services.logind.rebootKeyLongPress = "reboot";
 }
+
