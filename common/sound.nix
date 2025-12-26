@@ -1,4 +1,5 @@
-{ pkgs, ... }: {
+{ pkgs, ... }:
+{
   environment.systemPackages = with pkgs; [
     pipewire
   ];
@@ -16,7 +17,7 @@
       enable = true;
     };
   };
-  hardware.pulseaudio.enable = false;
+  services.pulseaudio.enable = false;
 
   # rtkit is optional but recommended
   security.rtkit.enable = true;
