@@ -10,5 +10,8 @@
     # ../../../modules/desktop/hyprland.nix
     # ../../../modules/desktop/cinnamon.nix
     # ../../../modules/desktop/pantheon.nix
+
+    # Flatpak and fixes
+    ../../../modules/flatpak
   ];
 }

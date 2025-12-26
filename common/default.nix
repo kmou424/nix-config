@@ -21,7 +21,6 @@
     ./sudo.nix
     ./user.nix
     ./shell.nix
-    ./flatpak.nix
     # Laptop-specific configs (bluetooth, power) are in ./laptop/
     # Import them in device configs that need them
   ];
