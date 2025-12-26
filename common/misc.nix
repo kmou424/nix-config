@@ -1,4 +1,5 @@
-{ lib, pkgs, ... }: {
+{ lib, pkgs, ... }:
+{
   # Enable unfree packages
   nixpkgs.config.allowUnfree = lib.mkForce true;
 
@@ -25,5 +26,5 @@
   };
 
   # replace default editor with nano
-  environment.variables.EDITOR = "nvim";
+  environment.variables.EDITOR = "vim";
 }

@@ -1,4 +1,5 @@
-{ pkgs, ... }: {
+{ pkgs, ... }:
+{
   # necessary packages
   environment.systemPackages = with pkgs; [
     git
@@ -7,7 +8,7 @@
     # editors
     nano
     # vim
-    neovim
+    vim
 
     # fetch
     wget
