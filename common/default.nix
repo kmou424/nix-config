@@ -12,6 +12,7 @@
 
   imports = [
     ./i18n.nix
+    ./kernel.nix
     ./misc.nix
     ./networking.nix
     ./nixgc.nix
