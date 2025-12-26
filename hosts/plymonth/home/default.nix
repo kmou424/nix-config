@@ -1,5 +1,6 @@
-{ username, useremail, ... }: {
-  home.stateVersion = "24.05";
+{ username, useremail, ... }:
+{
+  home.stateVersion = "25.11";
 
   home.username = username;
   home.homeDirectory = "/home/${username}";

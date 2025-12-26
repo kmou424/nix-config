@@ -3,11 +3,11 @@
 
   inputs = {
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
-    stable.url = "github:NixOS/nixpkgs/nixos-24.05";
+    stable.url = "github:NixOS/nixpkgs/nixos-25.11";
 
     # third party
     home-manager = {
-      url = "github:nix-community/home-manager/release-24.05";
+      url = "github:nix-community/home-manager/release-25.11";
       inputs.nixpkgs.follows = "stable";
     };
 
@@ -16,7 +16,8 @@
     };
   };
 
-  outputs = inputs@{ nixpkgs, ... }:
+  outputs =
+    inputs@{ nixpkgs, ... }:
     let
       consts = import ./consts.nix;
       username = consts.username;
@@ -26,7 +27,12 @@
     {
       nixosConfigurations = (
         import ./hosts {
-          inherit inputs system username useremail;
+          inherit
+            inputs
+            system
+            username
+            useremail
+            ;
         }
       );
     };
