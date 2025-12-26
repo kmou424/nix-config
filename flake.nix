@@ -2,13 +2,13 @@
   description = "kmou424's NixOS Flake";
 
   inputs = {
-    nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
-    stable.url = "github:NixOS/nixpkgs/nixos-25.11";
+    # nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
+    nixpkgs.url = "github:NixOS/nixpkgs/nixos-25.11";
 
     # third party
     home-manager = {
       url = "github:nix-community/home-manager/release-25.11";
-      inputs.nixpkgs.follows = "stable";
+      inputs.nixpkgs.follows = "nixpkgs";
     };
 
     grub2-themes = {
@@ -17,7 +17,7 @@
   };
 
   outputs =
-    inputs@{ nixpkgs, ... }:
+    inputs@{ nixpkgs, home-manager, ... }:
     let
       consts = import ./consts.nix;
       username = consts.username;
