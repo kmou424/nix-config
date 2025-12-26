@@ -63,7 +63,7 @@ in
       modules = [
         ./${hostname}
 
-        # No grub2-themes for headless server
+        grub2-themes.nixosModules.default
         home-manager.nixosModules.home-manager
         {
           home-manager.useGlobalPkgs = true;
