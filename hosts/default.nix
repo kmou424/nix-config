@@ -10,6 +10,7 @@ let
   nixosSystem = inputs.nixpkgs.lib.nixosSystem;
   home-manager = inputs.home-manager;
   grub2-themes = inputs.grub2-themes;
+  agenix = inputs.agenix;
 in
 {
   plymonth = nixosSystem (
@@ -31,6 +32,7 @@ in
       modules = [
         ./${hostname}
 
+        agenix.nixosModules.default
         grub2-themes.nixosModules.default
         home-manager.nixosModules.home-manager
         {
@@ -63,6 +65,7 @@ in
       modules = [
         ./${hostname}
 
+        agenix.nixosModules.default
         grub2-themes.nixosModules.default
         home-manager.nixosModules.home-manager
         {

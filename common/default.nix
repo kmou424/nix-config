@@ -11,6 +11,7 @@
   ];
 
   imports = [
+    ./age.nix
     ./i18n.nix
     ./kernel.nix
     ./misc.nix

@@ -13,5 +13,8 @@
     # fetch
     wget
     curl
+
+    # encryption
+    age
   ];
 }

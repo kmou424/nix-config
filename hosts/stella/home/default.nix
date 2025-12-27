@@ -8,6 +8,8 @@
   programs.home-manager.enable = true;
 
   imports = [
+    ../../../common/home
+
     # Program configurations (programs.*)
     ./configs
 

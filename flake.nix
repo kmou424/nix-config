@@ -14,10 +14,20 @@
     grub2-themes = {
       url = "github:vinceliuice/grub2-themes";
     };
+
+    agenix = {
+      url = "github:ryantm/agenix";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
   outputs =
-    inputs@{ nixpkgs, home-manager, ... }:
+    inputs@{
+      nixpkgs,
+      home-manager,
+      agenix,
+      ...
+    }:
     let
       consts = import ./consts.nix;
       username = consts.username;
