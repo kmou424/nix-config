@@ -1,4 +1,10 @@
-{ username, hostname, pkgs, ... }: {
+{
+  username,
+  hostname,
+  pkgs,
+  ...
+}:
+{
   programs.fish = {
     enable = true;
     shellAliases = {
